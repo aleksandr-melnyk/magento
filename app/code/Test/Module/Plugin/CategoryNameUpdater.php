@@ -10,10 +10,13 @@ class CategoryNameUpdater
 {
     /**
      * @param Category $subject
+     * @param $result
      * @return string
      */
-    public function afterGetName(Category $subject): string
+    public function afterGetName(Category $subject, $result): string
     {
-        return 'Test Category-Hello World';
+        $name = $result;
+        $name = 'Test Category-Hello World';
+        return $name;
     }
 }

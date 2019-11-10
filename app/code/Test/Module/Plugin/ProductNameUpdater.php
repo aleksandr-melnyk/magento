@@ -7,13 +7,15 @@ use \Magento\Catalog\Model\Product;
 
 class ProductNameUpdater
 {
-
     /**
      * @param Product $subject
+     * @param $result
      * @return string
      */
-    public function afterGetName(Product $subject): string
+    public function afterGetName(Product $subject, $result)
     {
-        return 'Test Product-Hello World';
+        $name = $result;
+        $name = 'Test Product-Hello World';
+        return $name;
     }
 }
