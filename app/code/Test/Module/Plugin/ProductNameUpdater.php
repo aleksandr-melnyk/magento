@@ -10,10 +10,10 @@ class ProductNameUpdater
 
     /**
      * @param Product $subject
-     * @return Product
+     * @return string
      */
-    public function beforeGetName(Product $subject): Product
+    public function afterGetName(Product $subject): string
     {
-        return $subject->setName('Test Product-Hello World');
+        return 'Test Product-Hello World';
     }
 }
