@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Product">
+        <plugin
+                name="product_name_updater_plugin"
+                type="Test\Module\Plugin\ProductNameUpdater"
+                sortOrder="1"
+                disabled="false"/>
+    </type>
+    <type name="Magento\Catalog\Model\Category">
+        <plugin
+                name="category_name_updater_plugin"
+                type="Test\Module\Plugin\CategoryNameUpdater"
+                sortOrder="1"
+                disabled="false"/>
+    </type>
+</config>
